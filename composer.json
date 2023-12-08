@@ -1,0 +1,51 @@
+{
+    "name": "solvecase/sentmaillogger",
+    "description": "Save a copy of laravel sent email in imap sent folder.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "SolveCase",
+            "email": "support@solvecase.com",
+            "homepage": "http://www.solvecase.com"
+        }
+    ],
+    "homepage": "https://github.com/solvecase/sentmaillogger",
+    "keywords": [
+        "laravel",
+        "sent",
+        "imap",
+        "pop3",
+        "log",
+        "copy",
+        "append",
+        "email",
+        "mail",
+        "message",
+        "event"
+    ],
+    "require": {
+        "laravel/framework": ">=9",
+        "ext-imap": "*"
+    },
+    "require-dev": {},
+    "autoload": {
+        "psr-4": {
+            "SolveCase\\SentMailLogger\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SolveCase\\SentMailLogger\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SolveCase\\SentMailLogger\\SentMailLoggerServiceProvider"
+            ],
+            "aliases": {
+                "SentMailLogger": "SolveCase\\SentMailLogger\\Facades\\SentMailLogger"
+            }
+        }
+    }
+}
